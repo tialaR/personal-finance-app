@@ -11,6 +11,8 @@ export default defineConfig({
       '@hooks':      resolve(__dirname, 'src/hooks'),
       '@contexts':   resolve(__dirname, 'src/contexts'),
       '@pages':      resolve(__dirname, 'src/pages'),
+      '@layouts':      resolve(__dirname, 'src/layouts'),
+      '@routes':      resolve(__dirname, 'src/routes'),
       '@providers':  resolve(__dirname, 'src/providers'),
       '@services':   resolve(__dirname, 'src/services'),
       '@styles':     resolve(__dirname, 'src/styles'),

@@ -13,8 +13,8 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: ${({ theme }) => theme.typography.fontFamily};
-    background-color: ${({ theme }) => theme.colors.grey[300]};
-    color: ${({ theme }) => theme.colors.other.brown};
+    background-color: ${({ theme }) => theme.colors.beige[100]};
+    color: ${({ theme }) => theme.colors.grey[900]};
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }

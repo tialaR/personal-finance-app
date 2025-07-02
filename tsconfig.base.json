@@ -18,6 +18,8 @@
         "@contexts/*":  ["src/contexts/*"],
         "@hooks/*":     ["src/hooks/*"],
         "@pages/*":     ["src/pages/*"],
+        "@layouts/*":   ["src/layouts/*"],
+        "@routes/*":    ["src/routes/*"],
         "@providers/*": ["src/providers/*"],
         "@services/*":  ["src/services/*"],
         "@styles/*":    ["src/styles/*"],

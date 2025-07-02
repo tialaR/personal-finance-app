@@ -1,10 +1,10 @@
-import { Dashboard } from "@pages/Dashboard"
 import { AppProviders } from "@providers/AppProviders"
+import { AppRoutes } from "./routes"
 
 function App() {
   return (
     <AppProviders>
-      <Dashboard />
+      <AppRoutes />
     </AppProviders>
   )
 }
