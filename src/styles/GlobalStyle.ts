@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html, body, #root { 
+    height: 100%; 
+  }
+
   html {
     font-size: 1rem; /* 16px */
   }

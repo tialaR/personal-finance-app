@@ -12,4 +12,3 @@ export const spacing = {
     100: '0.5rem',   // 8px
      50: '0.25rem',  // 4px
   }
-  
