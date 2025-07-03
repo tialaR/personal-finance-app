@@ -9,6 +9,9 @@ export const Wrapper = styled.div`
 export const Content = styled.main`
   flex: 1;                     
   overflow-y: auto;
-  padding: ${({ theme }) => theme.spacing[300]};
-  background: ${({ theme }) => theme.colors.white};
+  padding-left: ${({ theme }) => theme.spacing[500]};
+  padding-right: ${({ theme }) => theme.spacing[500]};
+  padding-top: ${({ theme }) => theme.spacing[400]};
+  padding-bottom: ${({ theme }) => theme.spacing[400]};
+  background: #F2F3F7;
 `;
