@@ -1,25 +1,51 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { MainLayout } from '@layouts/MainLayout';
 import { Overview } from '@pages/Overview';
 import { Transactions } from '@pages/Transactions';
 import { Budgets } from '@pages/Budgets';
 import { Pots } from '@pages/Pots';
 import { RecurringBills } from '@pages/RecurringBills';
+import { NotFound } from '@pages/NotFound';
 
-const AppRoutes: React.FC = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<MainLayout />}>
-          <Route index element={<Overview />} />
-          <Route path="transactions" element={<Transactions />} />
-          <Route path="budgets"      element={<Budgets />} />
-          <Route path="pots"         element={<Pots />} />
-          <Route path="recurring-bills" element={<RecurringBills />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+const appRoutes = createBrowserRouter([
+  {
+    path: '/',
+    element: <MainLayout />,
+    children: [
+      {
+        index: true,
+        element: <Overview />,
+        handle: { pageTitle: 'Overview' },
+      },
+      {
+        path: 'transactions',
+        element: <Transactions />,
+        handle: { pageTitle: 'Transactions' },
+      },
+      {
+        path: 'budgets',
+        element: <Budgets />,
+        handle: { pageTitle: 'Budgets' },
+      },
+      {
+        path: 'pots',
+        element: <Pots />,
+        handle: { pageTitle: 'Pots' },
+      },
+      {
+        path: 'recurring-bills',
+        element: <RecurringBills />,
+        handle: { pageTitle: 'Recurring Bills' },
+      },
+      {
+        path: '*',
+        element: <NotFound />,
+        handle: { pageTitle: '404 - Not Found' },
+      },
+    ],
+  },
+]);
+
+export const AppRoutes: React.FC = () => {
+  return <RouterProvider router={appRoutes} />;
 }
-
-export { AppRoutes }
