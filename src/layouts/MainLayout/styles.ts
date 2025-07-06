@@ -2,24 +2,18 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
-  height: 100%;             
+  height: 100%;              
   width: 100%;
 `;
 
 export const Content = styled.main`
-  flex: 1; /* ocupa todo o resto */
-  min-height: 0; /* evita overflow fantasma */
-  overflow-y: auto; /* scroll só se precisar em todas as pages */
-
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-height: 0; // permite que filhos com overflow-y funcionem
 
-  box-sizing: border-box;
-
-  padding-left: ${({ theme }) => theme.spacing[500]};
-  padding-right: ${({ theme }) => theme.spacing[500]};
-  padding-top: ${({ theme }) => theme.spacing[400]};
-  padding-bottom: ${({ theme }) => theme.spacing[400]};
-
+  overflow-y: auto;
   background: #F2F3F7;
+
+  padding: ${({ theme }) => theme.spacing[400]} ${({ theme }) => theme.spacing[500]};
 `;

@@ -3,6 +3,7 @@ import { spacing } from "@styles/spacing";
 import { typography } from "@styles/typography";
 import { breakpoints } from "@styles/breakpoints";
 import { dimensions } from "@styles/dimensions";
+import { colorsMap } from "@styles/colorsMap";
 
 export const theme = {
     colors,
@@ -10,5 +11,6 @@ export const theme = {
     spacing,
     breakpoints,
     dimensions,
+    colorsMap,
   } as const
   

@@ -13,7 +13,7 @@ const hideWhenCollapsed = css<CollapseProps>`
 
 export const SidebarContainer = styled.aside<CollapseProps>`
   height: 100vh;
-  width: ${({ $expanded }) => ($expanded ? '27%' : '7%')};
+  width: ${({ $expanded }) => ($expanded ? '20%' : '7%')};
   background: ${({ theme }) => theme.colors.grey[900]};
   transition: width 0.3s ease;
   display: flex;
@@ -60,12 +60,12 @@ export const NavItem = styled(NavLink).withConfig({
 
   transition: opacity 0.3s ease;
 
-  svg {
+  > svg {
     font-size: ${({ theme }) => theme.spacing[300]};
     flex-shrink: 0;
   }
 
-  span {
+  > span {
     ${typographyPreset[3]};
     ${hideWhenCollapsed};
     white-space: nowrap;
@@ -86,7 +86,7 @@ export const NavItem = styled(NavLink).withConfig({
     }
 
     &:hover {
-      opacity: 0.85;          
+      opacity: 0.60;          
     }
   }
 
@@ -115,14 +115,14 @@ export const Toggle = styled.button<CollapseProps>`
 
   transition: opacity 0.3s ease;
 
-  svg {
+  > svg {
     transform: ${({ $expanded }) => ($expanded ? 'rotate(0deg)' : 'rotate(180deg)')};
     transition: transform 0.3s ease;
     font-size: ${({ theme }) => theme.spacing[300]};
     flex-shrink: 0;
   }
 
-  span {
+  > span {
     ${typographyPreset[3]};
     ${hideWhenCollapsed};
     white-space: nowrap;

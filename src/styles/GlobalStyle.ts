@@ -41,4 +41,35 @@ export const GlobalStyle = createGlobalStyle`
     border: 0 none;
     outline: 0;
   } 
+
+  /* ---- Scroll bar ---- */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #EEEE transparent;
+    :hover {
+      scrollbar-color: #E0E0E0 transparent;
+    }
+  }
+  /* Chrome / Safari / Edge */
+  *::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #fafafa;
+    border-radius: 9999px;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #E0E0E0;
+  }
+  /* Evita layout-shift */
+  * {
+    scrollbar-gutter: stable;          
+  }
 `

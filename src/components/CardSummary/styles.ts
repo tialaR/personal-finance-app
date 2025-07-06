@@ -1,5 +1,5 @@
-import { typographyPreset } from '@styles/typographyPreset';
 import styled, { css } from 'styled-components';
+import { typographyPreset } from '@styles/typographyPreset';
 
 type CardProps = {
   $variant: 'primary' | 'default';

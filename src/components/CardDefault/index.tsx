@@ -4,9 +4,15 @@ import * as S from './styles';
 interface CardDefaultProps {
   children: ReactNode;
   area?: string;
+  isList?: boolean;
 }
 
 export const CardDefault: React.FC<CardDefaultProps> = ({
   children,
   area,
-}) => <S.Card $area={area}>{children}</S.Card>;
+  isList,
+}) => (<S.Card $area={area} >
+        <S.ScrollWrapper $isList={isList}>
+          {children}
+        </S.ScrollWrapper>
+      </S.Card>);
